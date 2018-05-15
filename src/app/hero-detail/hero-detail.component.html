@@ -1,0 +1,9 @@
+<div class="card card-body" *ngIf="hero">
+  <p class='lead mb-0'>{{ hero.name }} Details</p>
+  <hr>
+  <input class="form-control" [(ngModel)]="hero.name" placeholder="name">
+</div>
+
+<!-- <div class="card card-body" *ngElse> -->
+  <!-- <p class="lead">Please select a hero</p> -->
+<!-- </div> -->

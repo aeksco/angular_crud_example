@@ -1,1 +1,22 @@
-<p class="lead">{{ hero }}, away!</p>
+<!-- <input class="form-control" [(ngModel)]="hero.name" placeholder="name"> -->
+
+<div class="row">
+
+  <div class="col-sm-3">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let hero of heroes"
+        [class.active]="hero === selectedHero"
+        (click)="onSelect(hero)"
+      >
+        {{ hero.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-sm-9">
+    <app-hero-detail [hero]="selectedHero" ></app-hero-detail>
+  </div>
+
+</div>
