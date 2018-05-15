@@ -2,6 +2,14 @@
   <p class='lead mb-0'>{{ hero.name }} Details</p>
   <hr>
   <input class="form-control" [(ngModel)]="hero.name" placeholder="name">
+  <div class="row mt-2">
+    <div class="col-lg-12">
+      <button class='btn btn-outline-dark' (click)="goBack()">
+        <i class="fa fa-reply mr-2"></i>
+        Back
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- <div class="card card-body" *ngElse> -->

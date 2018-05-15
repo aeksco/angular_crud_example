@@ -4,19 +4,19 @@
 
   <div class="col-sm-3">
     <ul class="list-group">
-      <li
+      <a
         class="list-group-item"
         *ngFor="let hero of heroes"
         [class.active]="hero === selectedHero"
-        (click)="onSelect(hero)"
+        routerLink="/detail/{{hero.id}}"
       >
         {{ hero.name }}
-      </li>
+      </a>
     </ul>
   </div>
 
   <div class="col-sm-9">
-    <app-hero-detail [hero]="selectedHero" ></app-hero-detail>
+    <!-- <app-hero-detail [hero]="selectedHero" ></app-hero-detail> -->
   </div>
 
 </div>
